@@ -8,12 +8,15 @@ module.exports.calc = (event, context, callback) => {
   // compara se o paraetro 'Authorization' enviado nos headers são iguais
   if(authString.localeCompare(event.headers.Authorization) !== 0){
     // não sendo retorna um JSON alterando o status para 401 mais uma mensagem.
-    callback({ 
-        statusCode: 401, 
-        body:{ 
-          message: 'Código de autorização é necessário no header da requisição !'
-        }
-      }, response);
+    
+    const response = { 
+      statusCode: 401, 
+      body: JSON.stringify({ 
+        message: 'Código de autorização válido é necessário no header da requisição !'
+      })
+    }
+
+    callback(null, response);
   }
   // cria uma constante com o conteúdo do body da requisição
   const body = JSON.parse(event.body);
