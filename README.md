@@ -26,6 +26,8 @@ Repositório para teste de API utilizando Serverless Framework e Lambda AWS
     }
 
 
+### URLs
+
     Acesso local:
 
     http://localhost:3000/calc
@@ -38,4 +40,13 @@ Repositório para teste de API utilizando Serverless Framework e Lambda AWS
 
 ## Resultado esperado
 
+Teste local:
 
+![screenshot](https://github.com/rjramos70/kovi-api/blob/master/images/Screen%20Shot%202019-01-18%20at%2021.21.20.png)
+
+
+Teste na AWS:
+
+<p align="left">
+  <img src="https://github.com/rjramos70/kovi-api/blob/master/images/Screen%20Shot%202019-01-18%20at%2021.18.22.png" title="Print de tela do teste feito via Postman a URL na AWS">
+</p>
